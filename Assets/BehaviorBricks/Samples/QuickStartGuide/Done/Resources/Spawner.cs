@@ -1,15 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Component that is responsible for spawning a GameObjects in a certain position. 
 /// When instancing, it will move randomly in the area until it detects the player and begins to follow him.
 /// </summary>
-public class Spawner : MonoBehaviour {
+public class Spawner : MonoBehaviour
+{
 
     ///<value>The gameobject that will be spawned</value>
     public GameObject prefab;
     ///<value>the position that the gameobject will be spawned</value>
-    public Vector3 position;
+    public Transform position;
 
     ///<value>Area where the Gameobjects will move</value>
     public GameObject wanderArea;
@@ -21,12 +23,18 @@ public class Spawner : MonoBehaviour {
     /// <summary>
     /// method that instantiates the gameobjet in a certain position and adds the BehaviorExcutor component to follow the player
     /// </summary>
-	void Start() {
-        GameObject instance = Instantiate(prefab,position,Quaternion.identity) as GameObject;
+	void Start()
+    {
+        if (prefab == null || position == null)
+        {
+            Debug.LogError("Prefab or position is not set.");
+            return;
+        }
+        GameObject instance = Instantiate(prefab, position.position, Quaternion.identity) as GameObject;
         BehaviorExecutor behaviorExecutor = instance.GetComponent<BehaviorExecutor>();
 
 
-		//Codigo comentado para comprobaciones de editor y runtime
+        //Codigo comentado para comprobaciones de editor y runtime
 
         //if (BBUnity.Managers.BBManager.Instance.IsEditor)
         //    text.text = "EDITOR";
@@ -38,5 +46,14 @@ public class Spawner : MonoBehaviour {
             behaviorExecutor.SetBehaviorParam("wanderArea", wanderArea);
             behaviorExecutor.SetBehaviorParam("player", player);
         }
-	}
+        else
+        {
+            Debug.LogError("BehaviorExecutor component not found on the instantiated prefab.");
+        }
+    }
+
+    private GameObject Instantiate(GameObject prefab, Transform position, Quaternion identity)
+    {
+        throw new NotImplementedException();
+    }
 }
