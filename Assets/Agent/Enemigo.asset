@@ -16,11 +16,15 @@ MonoBehaviour:
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
     id=\"0\" guid=\"d7cb2b556dc848742840df3141cc261e\" nextId=\"58\">\r\n      <root>\r\n       
-    <RepeatDecorator id=\"36\" />\r\n      </root>\r\n      <inputParams />\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator
-    id=\"36\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
-    <PrioritySelectorNode id=\"51\" />\r\n      </child>\r\n      <inputParams />\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
+    <RepeatDecorator id=\"36\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"huida\" type=\"System.String\" isBlackboard=\"False\"
+    />\r\n          <entry name=\"Player\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\"
+    />\r\n          <entry name=\"Refugio\" type=\"System.String\" isBlackboard=\"False\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"36\" loops=\"-1\"
+    policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n        <PrioritySelectorNode
+    id=\"51\" />\r\n      </child>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
     id=\"51\">\r\n      <children>\r\n        <elem>\r\n          <GuardAndNode>\r\n           
     <guard>\r\n              <ConditionEvalNode id=\"55\" />\r\n            </guard>\r\n           
     <child>\r\n              <SubbehaviorNode id=\"54\" />\r\n            </child>\r\n         
@@ -32,49 +36,55 @@ MonoBehaviour:
     <ConditionEvalNode id=\"55\" policy=\"ATOMIC_CHECK\" name=\"Samples/ProgQuickStartGuide/IsNight\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <SubbehaviorNode id=\"54\">\r\n      <_guid>1b5d3cafac5fe124b95ac63794371d9a</_guid>\r\n     
-    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n   
-    <ConditionEvalNode id=\"57\" policy=\"ATOMIC_CHECK\" name=\"AlwaysTrue\">\r\n     
-    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
-    <SubbehaviorNode id=\"56\">\r\n      <_guid>fc12a05b4bd3afc4c93e5f8ca699f6bf</_guid>\r\n     
-    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n 
-    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"Enemigo\"
-    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
-    <elem>\r\n          <RepeatDecorator id=\"36\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <PrioritySelectorNode id=\"51\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <SubbehaviorNode id=\"54\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <ConditionEvalNode id=\"55\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <SubbehaviorNode id=\"56\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <ConditionEvalNode id=\"57\" />\r\n        </elem>\r\n     
-    </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n          <ConditionEvalNode
-    id=\"57\" />\r\n          <SubbehaviorNode id=\"56\" />\r\n          <SubbehaviorNode
-    id=\"54\" />\r\n          <ConditionEvalNode id=\"55\" />\r\n          <PrioritySelectorNode
-    id=\"51\" />\r\n          <RepeatDecorator id=\"36\" />\r\n        </nodes>\r\n     
-    </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"36\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"620.0103
-    181.7769\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
-    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <RepeatDecorator id=\"36\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n   
-    <PrioritySelectorNode id=\"51\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"566.2222 344.8889\" name=\"Priority Selector\"
-    description=\"\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <PrioritySelectorNode id=\"51\" />\r\n          <RepeatDecorator
-    id=\"36\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
-    <ConditionEvalNode id=\"55\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"545.0867 582.0252\" name=\"Samples/ProgQuickStartGuide/IsNight\"
-    description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <ConditionEvalNode id=\"55\" />\r\n          <PrioritySelectorNode
-    id=\"51\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
-    <SubbehaviorNode id=\"54\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"504.8889 518.2227\" name=\"Noche\" description=\"\"
-    cardinality=\"-1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <SubbehaviorNode id=\"54\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"huida\" type=\"System.String\"
+    isBlackboard=\"True\" blackboard=\"huida\" />\r\n          <entry name=\"Player\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"Player\" />\r\n       
+    </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode id=\"57\" policy=\"ATOMIC_CHECK\"
+    name=\"AlwaysTrue\">\r\n      <inputParams />\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"56\">\r\n     
+    <_guid>fc12a05b4bd3afc4c93e5f8ca699f6bf</_guid>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"Refugio\" type=\"System.String\" isBlackboard=\"True\"
+    blackboard=\"Refugio\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n  </runtimeInfo>\r\n 
+    <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"Enemigo\" _description=\"\"
+    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n         
+    <RepeatDecorator id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <PrioritySelectorNode id=\"51\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <SubbehaviorNode id=\"54\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ConditionEvalNode id=\"55\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <SubbehaviorNode id=\"56\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ConditionEvalNode id=\"57\" />\r\n        </elem>\r\n      </_rootList>\r\n     
+    <_nodes>\r\n        <nodes>\r\n          <ConditionEvalNode id=\"57\" />\r\n         
+    <SubbehaviorNode id=\"56\" />\r\n          <SubbehaviorNode id=\"54\" />\r\n         
+    <ConditionEvalNode id=\"55\" />\r\n          <PrioritySelectorNode id=\"51\"
+    />\r\n          <RepeatDecorator id=\"36\" />\r\n        </nodes>\r\n      </_nodes>\r\n   
+    </BehaviorTree>\r\n    <RepeatDecorator id=\"36\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"620.0103 181.7769\" name=\"Repeat\"
+    description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"36\" />\r\n       
+    </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
+    id=\"51\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"566.2222 344.8889\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
+    id=\"51\" />\r\n          <RepeatDecorator id=\"36\" />\r\n        </data>\r\n     
+    </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"55\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"544.1978
+    582.0252\" name=\"Samples/ProgQuickStartGuide/IsNight\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ConditionEvalNode id=\"55\" />\r\n          <PrioritySelectorNode id=\"51\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode
+    id=\"54\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"504 518.2227\" name=\"Noche\" description=\"\" cardinality=\"-1\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode
+    id=\"54\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
     <ConditionEvalNode id=\"57\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"True\" position=\"861.4323 568.0001\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"861.4323 566.2224\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"57\" />\r\n          <PrioritySelectorNode id=\"51\"
     />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode
-    id=\"56\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"782.2224 510.2223\" name=\"movetoclose\" description=\"\" cardinality=\"-1\"
+    id=\"56\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"782.2224 508.4445\" name=\"movetoclose\" description=\"\" cardinality=\"-1\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode
     id=\"56\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n 
     </editorInfo>\r\n</BehaviorBricks>"
