@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: movetoclose
+  m_EditorClassIdentifier: 
+  brickName: Assets/Agent/movetoclose.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"fc12a05b4bd3afc4c93e5f8ca699f6bf\" nextId=\"13\">\r\n      <root>\r\n       
+    <SelectorNode id=\"11\" />\r\n      </root>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams>\r\n        <localValues>\r\n         
+    <entry name=\"Objetivo\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\"
+    />\r\n        </localValues>\r\n      </localParams>\r\n    </BehaviorTree>\r\n   
+    <SelectorNode id=\"11\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
+    id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n          <TimeLimitDecorator
+    id=\"10\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"8\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <ActionNode
+    id=\"5\" action=\"GameObject/ClosestGameObjectWithTag\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"tag\" type=\"System.String\" isBlackboard=\"False\"
+    value=\"refugio\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"foundGameObject\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"Objetivo\"
+    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
+    />\r\n    </ActionNode>\r\n    <TimeLimitDecorator id=\"10\" TimeLimit=\"15\">\r\n     
+    <child>\r\n        <ActionNode id=\"12\" />\r\n      </child>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </TimeLimitDecorator>\r\n   
+    <ActionNode id=\"8\" action=\"GameObject/SetActive\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"active\" type=\"System.Boolean\" isBlackboard=\"False\"
+    value=\"False\" />\r\n          <entry name=\"game object\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"12\" action=\"Navigation/MoveToGameObject\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"Objetivo\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"movetoclose\"
+    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
+    <elem>\r\n          <ActionNode id=\"5\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"8\" />\r\n        </elem>\r\n        <elem>\r\n          <TimeLimitDecorator
+    id=\"10\" />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode
+    id=\"11\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"12\"
+    />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <ActionNode id=\"12\" />\r\n          <ActionNode id=\"5\" />\r\n          <TimeLimitDecorator
+    id=\"10\" />\r\n          <ActionNode id=\"8\" />\r\n          <SelectorNode
+    id=\"11\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <SelectorNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"626.267 203.7778\" name=\"Selector\" description=\"Executes all its
+    children until one of them is successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SelectorNode id=\"11\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SelectorNode>\r\n    <ActionNode id=\"5\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"179.2833
+    477.8946\" name=\"GameObject/ClosestGameObjectWithTag\" description=\"Finds the
+    closest game object with a given tag\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"5\" />\r\n          <SelectorNode
+    id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <TimeLimitDecorator id=\"10\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"True\" position=\"625.3782 486.4443\" name=\"TimeLimit\" description=\"TimeLimit\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <TimeLimitDecorator id=\"10\" />\r\n          <SelectorNode id=\"11\" />\r\n       
+    </data>\r\n      </_data>\r\n    </TimeLimitDecorator>\r\n    <ActionNode id=\"8\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"864.7061
+    492.8281\" name=\"GameObject/SetActive\" description=\"Activates or deactivates
+    the game object\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"8\" />\r\n          <SelectorNode id=\"11\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
+    id=\"12\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"571.5554 681.7776\" name=\"Navigation/MoveToGameObject\" description=\"Moves
+    the game object towards a given target by using a NavMeshAgent\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"12\" />\r\n          <TimeLimitDecorator id=\"10\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.9
+  subslist: []
+  _guid: fc12a05b4bd3afc4c93e5f8ca699f6bf
