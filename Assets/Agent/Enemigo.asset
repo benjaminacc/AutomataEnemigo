@@ -38,7 +38,8 @@ MonoBehaviour:
     <SubbehaviorNode id=\"54\">\r\n      <_guid>1b5d3cafac5fe124b95ac63794371d9a</_guid>\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"huida\" type=\"System.String\"
     isBlackboard=\"True\" blackboard=\"huida\" />\r\n          <entry name=\"Player\"
-    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"Player\" />\r\n       
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"Player\" />\r\n         
+    <entry name=\"self\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\" />\r\n       
     </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
     />\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode id=\"57\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\"
     name=\"AlwaysTrue\">\r\n      <inputParams />\r\n      <outputParams />\r\n     
@@ -69,25 +70,25 @@ MonoBehaviour:
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
     id=\"51\" />\r\n          <RepeatDecorator id=\"36\" />\r\n        </data>\r\n     
     </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"55\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"787.6498
-    396.044\" name=\"Samples/ProgQuickStartGuide/IsNight\" description=\"Eval\" cardinality=\"1\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"719.0782
+    370.901\" name=\"Samples/ProgQuickStartGuide/IsNight\" description=\"Eval\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
     id=\"55\" />\r\n          <PrioritySelectorNode id=\"51\" />\r\n        </data>\r\n     
     </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"54\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"True\" position=\"747.4518
-    332.2409\" name=\"Noche\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"678.8802
+    307.0979\" name=\"Noche\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"54\" />\r\n       
     </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode
-    id=\"57\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"1104.886 380.241\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
+    id=\"57\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"1124.314 374.5267\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
     id=\"57\" />\r\n          <PrioritySelectorNode id=\"51\" />\r\n        </data>\r\n     
     </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"56\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1025.677
-    322.4626\" name=\"movetoclose\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1045.105
+    316.7483\" name=\"movetoclose\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"56\" />\r\n       
     </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.8
+  zoom: 0.7
   subslist:
   - {fileID: 11400000, guid: 1b5d3cafac5fe124b95ac63794371d9a, type: 2}
   - {fileID: 11400000, guid: fc12a05b4bd3afc4c93e5f8ca699f6bf, type: 2}

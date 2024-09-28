@@ -666,12 +666,12 @@ GameObject:
   - component: {fileID: 204976879}
   - component: {fileID: 204976878}
   m_Layer: 0
-  m_Name: Enemy (6)
+  m_Name: Huida3
   m_TagString: huida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &204976878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,12 +1069,12 @@ GameObject:
   - component: {fileID: 241011494}
   - component: {fileID: 241011493}
   m_Layer: 0
-  m_Name: Enemy (1)
+  m_Name: Refugio1
   m_TagString: Refugio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &241011493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,6 +2342,7 @@ MonoBehaviour:
   prefab: {fileID: 769650765830411820, guid: 86b4eddf94fbec44a9579f092d70fb2f, type: 3}
   wanderArea: {fileID: 377430645}
   maxPrefabs: 5
+  Mainlight: {fileID: 705507993}
 --- !u!4 &579384602
 Transform:
   m_ObjectHideFlags: 0
@@ -2569,7 +2570,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f162970f04d52cb4d93266ffe430e318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayDuration: 15
+  dayDuration: 100
+--- !u!1 &779801565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779801568}
+  - component: {fileID: 779801567}
+  - component: {fileID: 779801566}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &779801566
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779801565}
+  m_Enabled: 1
+--- !u!20 &779801567
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779801565}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &779801568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779801565}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.23370892, y: -0.6673681, z: 0.23370892, w: 0.6673681}
+  m_LocalPosition: {x: 75, y: 28.6, z: 13.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 38.6, y: -90, z: 0}
 --- !u!1 &792060678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,12 +2679,12 @@ GameObject:
   - component: {fileID: 792060680}
   - component: {fileID: 792060679}
   m_Layer: 0
-  m_Name: Enemy (2)
+  m_Name: Refugio3
   m_TagString: Refugio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &792060679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4014,104 +4107,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376797348}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1459982296
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1459982298}
-  - component: {fileID: 1459982297}
-  m_Layer: 0
-  m_Name: activador
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1459982297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459982296}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 422fb6956201c7944ae2113a1a53b0b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTasksPerTick: 500
-  behavior: {fileID: 11400000, guid: 4e20929214915a74692bef8260f294a9, type: 2}
-  paused: 0
-  restartWhenFinished: 0
-  blackboard:
-    intParams: 
-    intParamsNames: []
-    intParamsLostDefaultValue: 
-    boolParams: 
-    boolParamsNames: []
-    boolParamsLostDefaultValue: 
-    floatParams: []
-    floatParamsNames: []
-    floatParamsLostDefaultValue: 
-    stringParams:
-    - enemy
-    stringParamsNames:
-    - tag
-    stringParamsLostDefaultValue: 
-    colorParams: []
-    colorParamsNames: []
-    colorParamsLostDefaultValue: 
-    objectParams: []
-    objectParamsNames: []
-    objectParamsLostDefaultValue: 
-    layerMaskParams: []
-    layerMaskParamsNames: []
-    layerMaskParamsLostDefaultValue: 
-    enumParamsNames: []
-    enumParamsLostDefaultValue: 
-    vector2Params: []
-    vector2ParamsNames: []
-    vector2ParamsLostDefaultValue: 
-    vector3Params: []
-    vector3ParamsNames: []
-    vector3ParamsLostDefaultValue: 
-    vector4Params: []
-    vector4ParamsNames: []
-    vector4ParamsLostDefaultValue: 
-    rectParams: []
-    rectParamsNames: []
-    rectParamsLostDefaultValue: 
-    animationCurveParams: []
-    animationCurveParamsNames: []
-    animationCurveParamsLostDefaultValue: 
-    boundsParams: []
-    boundsParamsNames: []
-    boundsParamsLostDefaultValue: 
-    gradientParams: []
-    gradientParamsNames: []
-    gradientParamsLostDefaultValue: 
-    quaternionParams: []
-    quaternionParamsNames: []
-    quaternionParamsLostDefaultValue: 
---- !u!4 &1459982298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459982296}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.51472, y: 7.239921, z: 23.808645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514326977
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,12 +4649,12 @@ GameObject:
   - component: {fileID: 1587878446}
   - component: {fileID: 1587878445}
   m_Layer: 0
-  m_Name: Enemy (5)
+  m_Name: Refugio2
   m_TagString: Refugio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1587878445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5103,12 +5098,12 @@ GameObject:
   - component: {fileID: 1681583258}
   - component: {fileID: 1681583257}
   m_Layer: 0
-  m_Name: Enemy (4)
+  m_Name: Huida2
   m_TagString: huida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1681583257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5532,7 +5527,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685350139}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &1685350147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5850,12 +5845,12 @@ GameObject:
   - component: {fileID: 1874095599}
   - component: {fileID: 1874095598}
   m_Layer: 0
-  m_Name: Enemy (7)
+  m_Name: Huida1
   m_TagString: huida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1874095598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6743,4 +6738,4 @@ SceneRoots:
   - {fileID: 792060685}
   - {fileID: 1681583263}
   - {fileID: 204976884}
-  - {fileID: 1459982298}
+  - {fileID: 779801568}

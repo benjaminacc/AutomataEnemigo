@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using BBSamples.PQSG;
 /// <summary>
 /// Component that is responsible for spawning many GameObjects in a certain area. 
 /// Each Gameobject instaciated will be assigned a behavior to move around the area randomly.
@@ -15,13 +16,23 @@ public class MassSpawner : MonoBehaviour
     public int maxPrefabs = 5;
     List<GameObject> entities;
 
+    public GameObject Mainlight;
+    DoneDayNightCycle dayNightCycleChecker;
+
     /// <summary>
     /// Initialize the entities to pass them to the behaviors
     /// </summary>
     void Start()
     {
+        dayNightCycleChecker = Mainlight.GetComponent<DoneDayNightCycle>();
         entities = new List<GameObject>();
+        while (entities.Count < maxPrefabs)
+        {
+            Spawn();
+        }
+
         InvokeRepeating("CheckAndSpawn", 0f, 1.0f); // Check every second
+
     }
 
     /// <summary>
@@ -29,8 +40,11 @@ public class MassSpawner : MonoBehaviour
     /// </summary>
     void CheckAndSpawn()
     {
+        if (!dayNightCycleChecker.isNight) return;
+       
         // Remove null entries (destroyed prefabs)
         entities.RemoveAll(e => e == null);
+        
 
         // If there are less than the required prefabs, spawn the missing ones
         while (entities.Count < maxPrefabs)
