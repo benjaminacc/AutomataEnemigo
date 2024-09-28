@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 /// <summary>
 /// Component that is responsible for spawning many GameObjects in a certain area. 
@@ -12,9 +11,8 @@ public class MassSpawner : MonoBehaviour
     ///<value>Area where the Gameobjects will move</value>
     public GameObject wanderArea;
 
-    ///<value>Times that The GameObject spawn</value>
-    public int Spawns = 500;
-    int spawnCount = 0;
+    ///<value>Maximum number of prefabs to keep active</value>
+    public int maxPrefabs = 5;
     List<GameObject> entities;
 
     /// <summary>
@@ -22,9 +20,23 @@ public class MassSpawner : MonoBehaviour
     /// </summary>
     void Start()
     {
-        entities = new List<GameObject>(FindObjectsOfType(typeof(GameObject)) as GameObject[]);
-        entities.RemoveAll(e => e.GetComponent<BehaviorExecutor>() == null);
-        InvokeRepeating("Spawn", 0f, 1.0f / 1000.0f);
+        entities = new List<GameObject>();
+        InvokeRepeating("CheckAndSpawn", 0f, 1.0f); // Check every second
+    }
+
+    /// <summary>
+    /// Method that checks how many prefabs are active and spawns more if needed.
+    /// </summary>
+    void CheckAndSpawn()
+    {
+        // Remove null entries (destroyed prefabs)
+        entities.RemoveAll(e => e == null);
+
+        // If there are less than the required prefabs, spawn the missing ones
+        while (entities.Count < maxPrefabs)
+        {
+            Spawn();
+        }
     }
 
     /// <summary>
@@ -32,22 +44,21 @@ public class MassSpawner : MonoBehaviour
     /// </summary>
     void Spawn()
     {
-        if (spawnCount <= Spawns)
+        GameObject instance = Instantiate(prefab, GetRandomPosition(), Quaternion.identity) as GameObject;
+        BehaviorExecutor component = instance.GetComponent<BehaviorExecutor>();
+        component.SetBehaviorParam("wanderArea", wanderArea);
+        component.SetBehaviorParam("player", GetRandomEntity());
+
+        entities.Add(instance);
+    }
+
+    private GameObject GetRandomEntity()
+    {
+        if (entities.Count > 0)
         {
-            GameObject instance = Instantiate(prefab, GetRandomPosition(), Quaternion.identity) as GameObject;
-            BehaviorExecutor component = instance.GetComponent<BehaviorExecutor>();
-            component.SetBehaviorParam("wanderArea", wanderArea);
-            component.SetBehaviorParam("player", entities[Random.Range(0, entities.Count)]);
-
-            ++spawnCount;
-
-            entities.Add(instance);
+            return entities[Random.Range(0, entities.Count)];
         }
-        else
-        {
-            CancelInvoke();
-        }
-
+        return null;
     }
 
     private Vector3 GetRandomPosition()
@@ -57,10 +68,10 @@ public class MassSpawner : MonoBehaviour
         if (boxCollider != null)
         {
             randomPosition = new Vector3(Random.Range(wanderArea.transform.position.x - wanderArea.transform.localScale.x * boxCollider.size.x * 0.5f,
-                                                                  wanderArea.transform.position.x + wanderArea.transform.localScale.x * boxCollider.size.x * 0.5f),
+                                                      wanderArea.transform.position.x + wanderArea.transform.localScale.x * boxCollider.size.x * 0.5f),
                                          wanderArea.transform.position.y,
                                          Random.Range(wanderArea.transform.position.z - wanderArea.transform.localScale.z * boxCollider.size.z * 0.5f,
-                                                                  wanderArea.transform.position.z + wanderArea.transform.localScale.z * boxCollider.size.z * 0.5f));
+                                                      wanderArea.transform.position.z + wanderArea.transform.localScale.z * boxCollider.size.z * 0.5f));
         }
 
         return randomPosition;
