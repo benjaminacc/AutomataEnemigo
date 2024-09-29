@@ -41,10 +41,10 @@ public class MassSpawner : MonoBehaviour
     void CheckAndSpawn()
     {
         if (!dayNightCycleChecker.isNight) return;
-       
+
         // Remove null entries (destroyed prefabs)
         entities.RemoveAll(e => e == null);
-        
+
 
         // If there are less than the required prefabs, spawn the missing ones
         while (entities.Count < maxPrefabs)

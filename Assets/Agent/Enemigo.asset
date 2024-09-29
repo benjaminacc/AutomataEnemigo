@@ -61,33 +61,34 @@ MonoBehaviour:
     <ConditionEvalNode id=\"55\" />\r\n          <PrioritySelectorNode id=\"51\"
     />\r\n          <RepeatDecorator id=\"36\" />\r\n        </nodes>\r\n      </_nodes>\r\n   
     </BehaviorTree>\r\n    <RepeatDecorator id=\"36\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"863.4639 -4.20348\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"284.8929 168.6538\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"36\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
     id=\"51\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"809.6749 158.9083\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    position=\"231.1038 331.7649\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
     id=\"51\" />\r\n          <RepeatDecorator id=\"36\" />\r\n        </data>\r\n     
     </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"55\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"719.0782
-    370.901\" name=\"Samples/ProgQuickStartGuide/IsNight\" description=\"Eval\" cardinality=\"1\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
-    id=\"55\" />\r\n          <PrioritySelectorNode id=\"51\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"54\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"678.8802
-    307.0979\" name=\"Noche\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"54\" />\r\n       
-    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode
-    id=\"57\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
-    position=\"1124.314 374.5267\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
-    id=\"57\" />\r\n          <PrioritySelectorNode id=\"51\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"56\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1045.105
-    316.7483\" name=\"movetoclose\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"56\" />\r\n       
-    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"140.5074
+    543.7575\" name=\"Samples/ProgQuickStartGuide/IsNight\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ConditionEvalNode id=\"55\" />\r\n          <PrioritySelectorNode id=\"51\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode
+    id=\"54\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"100.3091 479.9537\" name=\"Noche\" description=\"\" cardinality=\"-1\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode
+    id=\"54\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
+    <ConditionEvalNode id=\"57\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"545.7417 547.3832\" name=\"AlwaysTrue\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ConditionEvalNode id=\"57\" />\r\n          <PrioritySelectorNode id=\"51\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode
+    id=\"56\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"466.534 489.6041\" name=\"movetoclose\" description=\"\" cardinality=\"-1\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode
+    id=\"56\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n 
+    </editorInfo>\r\n</BehaviorBricks>"
   zoom: 0.7
   subslist:
   - {fileID: 11400000, guid: 1b5d3cafac5fe124b95ac63794371d9a, type: 2}
