@@ -8,7 +8,6 @@ public class MovementController : MonoBehaviour
     public float jumpForce = 5.0f;
     private float verticalRotation = 0;
     private bool isGrounded;
-    public bool isActack = false;
     public float time = 0.5f;
 
     public bool Item = false;
@@ -46,23 +45,9 @@ public class MovementController : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        if(Input.GetMouseButton(0))
-        {
-            isActack = true;
-            StartCoroutine(desactivedAttack(time));
-
-        }
-        
-            
-        
     }
 
-    public IEnumerator desactivedAttack(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        isActack = false;
-    }
-
+  
     // Método para verificar si está en el suelo
     bool IsGrounded()
     {

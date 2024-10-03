@@ -11,10 +11,12 @@ public class EnemySystem : MonoBehaviour
     public float rangoAtaque = 2f; // Distancia de ataque
     public float rangoRegresoPatrulla = 15f; // Rango para regresar a patrullar
     public AudioSource sonidoAtaque; // Sonido del ataque
+    public bool isActack = false;
 
     private NavMeshAgent agente;
     private int indicePatrullaActual;
     private float distanciaAlJugador;
+    public float Time = 0.5f;
 
     void Start()
     {
@@ -61,6 +63,14 @@ public class EnemySystem : MonoBehaviour
     void AtacarJugador()
     {
         sonidoAtaque.PlayOneShot(sonidoAtaque.clip);
+        isActack = true;
+        StartCoroutine(DesactivarAtaque(Time));
+    }
+
+    IEnumerator DesactivarAtaque(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isActack = false;
     }
 
     void IrAlSiguientePuntoPatrulla()

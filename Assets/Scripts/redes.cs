@@ -8,6 +8,7 @@ public class redes : MonoBehaviour
 {
     [SerializeField] private DoneDayNightCycle dayNightCycle;
     [SerializeField] MovementController movementController;
+    [SerializeField] private EnemySystem enemySystem;
 
     [SerializeField] private Material skyboxNeblina;
     [SerializeField] private Material skyboxLluvia;
@@ -40,7 +41,7 @@ public class redes : MonoBehaviour
     {
         if(dayNightCycle.isNight)
         {
-            Plluvia.x = 0.3f;
+            Plluvia.x = 0.1f;
             Pneblina.x = 0.5f;
             PlunaSagrienta.x = 0.4f;
         }
@@ -70,7 +71,7 @@ public class redes : MonoBehaviour
 
     public void Atack()
     {
-        if(movementController.isActack)
+        if(enemySystem.isActack)
         {
             Plluvia.z = 0.1f;
             Pneblina.z = 0.2f;
