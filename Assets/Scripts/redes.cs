@@ -100,14 +100,19 @@ public class redes : MonoBehaviour
         if(qn > qll && qn > qls)
         {
             RenderSettings.skybox = skyboxNeblina;
+            // Acticar el componente Fog y establecer la densidad en 0.06
+            RenderSettings.fog = true;
+            RenderSettings.fogDensity = 0.06f;
         }
         else if(qll > qn && qll > qls)
         {
             RenderSettings.skybox = skyboxLluvia;
+            RenderSettings.fog = false;
         }
         else
         {
             RenderSettings.skybox = skyboxLunaSangrienta;
+            RenderSettings.fog = false;
         }
 
     }
